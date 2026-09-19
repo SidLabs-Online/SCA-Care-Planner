@@ -1,0 +1,27 @@
+cff-version: 1.2.0
+message: "If you use this software or its algorithm, please cite it as below."
+title: "SCA Care Planner: evidence-linked care-review priorities for children with sex chromosome aneuploidies"
+type: software
+authors:
+  - family-names: Mitra
+    given-names: Sidhartha
+    affiliation: "SidLabs Online LLP"
+    email: sid@sidlabs.net
+version: 0.2.0
+date-released: 2026-09-19
+license: Apache-2.0
+repository-code: "https://github.com/SidLabs-Online/SCA-Care-Planner"
+keywords:
+  - clinical decision support
+  - sex chromosome aneuploidy
+  - Klinefelter syndrome
+  - pediatric developmental monitoring
+  - three-valued logic
+  - research software
+abstract: >-
+  A dependency-free Python library that evaluates condition, age and
+  care-history rules in three-valued logic, ranks care-review candidates with
+  the workflow key P(a) = (c_a, -d_a), attaches evidence to every suggested
+  action, projects rule-supported monitoring over 24 months, and turns missing
+  information into ranked verification questions. It estimates no risk
+  probabilities and has not been clinically validated.

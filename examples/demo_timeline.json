@@ -1,0 +1,131 @@
+{
+  "start_age_months": 22.0,
+  "end_age_months": 46.0,
+  "pack_id": "sca-care-us-development-seed",
+  "pack_sha256": "03d69fd2ea427adf7f40c20afd8bd27f214c3bb2fcc2508cde2a4848039db01c",
+  "excluded_future_records": 0,
+  "risk_probability": null,
+  "events": [
+    {
+      "age_months": 22.0,
+      "action_id": "autism_screen:18",
+      "rule_id": "autism_screen",
+      "state": "verify",
+      "previous_state": null,
+      "action": "Review completion or arrange age-appropriate autism screening with the clinician.",
+      "evidence_ids": [
+        "CDC2026"
+      ]
+    },
+    {
+      "age_months": 22.0,
+      "action_id": "autism_screen:24",
+      "rule_id": "autism_screen",
+      "state": "scheduled",
+      "previous_state": null,
+      "action": "Review completion or arrange age-appropriate autism screening with the clinician.",
+      "evidence_ids": [
+        "CDC2026"
+      ]
+    },
+    {
+      "age_months": 22.0,
+      "action_id": "developmental_concern_review",
+      "rule_id": "developmental_concern_review",
+      "state": "review",
+      "previous_state": null,
+      "action": "Discuss the current developmental concern with the child's clinician to decide on assessment or referral.",
+      "evidence_ids": [
+        "AAP2020"
+      ]
+    },
+    {
+      "age_months": 22.0,
+      "action_id": "developmental_screen:30",
+      "rule_id": "developmental_screen",
+      "state": "scheduled",
+      "previous_state": null,
+      "action": "Review completion or arrange age-appropriate standardized developmental screening with the clinician.",
+      "evidence_ids": [
+        "CDC2026"
+      ]
+    },
+    {
+      "age_months": 23.0,
+      "action_id": "developmental_concern_review",
+      "rule_id": "developmental_concern_review",
+      "state": "verify",
+      "previous_state": "review",
+      "action": "Discuss the current developmental concern with the child's clinician to decide on assessment or referral.",
+      "evidence_ids": [
+        "AAP2020"
+      ]
+    },
+    {
+      "age_months": 23.0,
+      "action_id": "xxy_support_plan_review",
+      "rule_id": "xxy_support_plan_review",
+      "state": "verify",
+      "previous_state": null,
+      "action": "Discuss a documented plan for speech, learning and psychosocial monitoring with the care team.",
+      "evidence_ids": [
+        "EAA2020"
+      ]
+    },
+    {
+      "age_months": 24.0,
+      "action_id": "autism_screen:18",
+      "rule_id": "autism_screen",
+      "state": "ends",
+      "previous_state": "verify",
+      "action": "Review completion or arrange age-appropriate autism screening with the clinician.",
+      "evidence_ids": [
+        "CDC2026"
+      ]
+    },
+    {
+      "age_months": 24.0,
+      "action_id": "autism_screen:24",
+      "rule_id": "autism_screen",
+      "state": "verify",
+      "previous_state": "scheduled",
+      "action": "Review completion or arrange age-appropriate autism screening with the clinician.",
+      "evidence_ids": [
+        "CDC2026"
+      ]
+    },
+    {
+      "age_months": 30.0,
+      "action_id": "developmental_screen:30",
+      "rule_id": "developmental_screen",
+      "state": "verify",
+      "previous_state": "scheduled",
+      "action": "Review completion or arrange age-appropriate standardized developmental screening with the clinician.",
+      "evidence_ids": [
+        "CDC2026"
+      ]
+    },
+    {
+      "age_months": 37.0,
+      "action_id": "autism_screen:24",
+      "rule_id": "autism_screen",
+      "state": "ends",
+      "previous_state": "verify",
+      "action": "Review completion or arrange age-appropriate autism screening with the clinician.",
+      "evidence_ids": [
+        "CDC2026"
+      ]
+    },
+    {
+      "age_months": 37.0,
+      "action_id": "developmental_screen:30",
+      "rule_id": "developmental_screen",
+      "state": "ends",
+      "previous_state": "verify",
+      "action": "Review completion or arrange age-appropriate standardized developmental screening with the clinician.",
+      "evidence_ids": [
+        "CDC2026"
+      ]
+    }
+  ]
+}

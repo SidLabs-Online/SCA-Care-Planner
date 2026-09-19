@@ -1,0 +1,71 @@
+[build-system]
+requires = ["setuptools>=69"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "sca-care-planner"
+version = "0.2.0"
+description = "Evidence-linked care-review priorities, 24-month monitoring timelines and plan-changing questions for children with sex chromosome aneuploidies. Research software."
+readme = "README.md"
+requires-python = ">=3.10"
+license = "Apache-2.0"
+license-files = ["LICENSE", "NOTICE"]
+authors = [{ name = "Sidhartha Mitra", email = "sid@sidlabs.net" }]
+maintainers = [{ name = "SidLabs Online LLP", email = "sid@sidlabs.net" }]
+keywords = ["clinical-decision-support", "sex-chromosome-aneuploidy", "klinefelter", "pediatrics", "care-planning", "three-valued-logic", "research-software"]
+classifiers = [
+  "Development Status :: 3 - Alpha",
+  "Intended Audience :: Science/Research",
+  "Intended Audience :: Healthcare Industry",
+  "Programming Language :: Python :: 3",
+  "Programming Language :: Python :: 3 :: Only",
+  "Topic :: Scientific/Engineering :: Medical Science Apps.",
+  "Typing :: Typed",
+]
+dependencies = []
+
+[project.optional-dependencies]
+graph = ["networkx>=3.0"]
+dev = ["pytest>=8", "pytest-cov>=5", "ruff>=0.6", "mypy>=1.10", "networkx>=3.0"]
+
+[project.scripts]
+sca-care = "sca_care_planner.cli:main"
+
+[project.urls]
+Repository = "https://github.com/SidLabs-Online/SCA-Care-Planner"
+Issues = "https://github.com/SidLabs-Online/SCA-Care-Planner/issues"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.setuptools.package-data]
+sca_care_planner = ["py.typed", "packs/*.json"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+addopts = "-q --strict-markers"
+
+[tool.coverage.run]
+source = ["sca_care_planner"]
+branch = true
+
+[tool.coverage.report]
+show_missing = true
+skip_covered = true
+
+[tool.ruff]
+line-length = 120
+target-version = "py310"
+src = ["src", "tests"]
+
+[tool.ruff.lint]
+select = ["E", "F", "W", "I", "B", "UP", "SIM", "RUF", "N", "C4", "PT", "RET"]
+
+[tool.mypy]
+strict = true
+python_version = "3.10"
+files = ["src"]
+
+[[tool.mypy.overrides]]
+module = ["networkx", "networkx.*"]
+ignore_missing_imports = true

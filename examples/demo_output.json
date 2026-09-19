@@ -1,0 +1,173 @@
+{
+  "status": "research_prototype",
+  "pack_id": "sca-care-us-development-seed",
+  "pack_version": "0.1.0",
+  "pack_sha256": "03d69fd2ea427adf7f40c20afd8bd27f214c3bb2fcc2508cde2a4848039db01c",
+  "evidence_review_date": "2026-09-19",
+  "clinical_validation": "not_performed",
+  "complete_care_coverage": false,
+  "scope_notes": "Incomplete developmental monitoring demonstration; clinician review of rules has not occurred. No acute triage, endocrine, cardiac or treatment modules.",
+  "age_months": 22.0,
+  "requested_horizon_months": 24.0,
+  "requested_end_age_months": 46.0,
+  "seed_pack_end_age_months": 46.0,
+  "risk_probability": null,
+  "risk_probability_status": "not_estimated",
+  "actions": [
+    {
+      "action_id": "developmental_concern_review",
+      "domain": "development",
+      "action": "Discuss the current developmental concern with the child's clinician to decide on assessment or referral.",
+      "due_age_months": 22.0,
+      "due_in_months": 0.0,
+      "overdue_months": 0.0,
+      "priority_class": "review",
+      "priority_key": [
+        3,
+        -22.0
+      ],
+      "rule_id": "developmental_concern_review",
+      "rule_version": "0.1.0",
+      "evidence": [
+        {
+          "id": "AAP2020",
+          "title": "Promoting Optimal Development",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/31843861/",
+          "type": "clinical_report",
+          "source_date": "2020"
+        }
+      ],
+      "rule_review_status": "author_drafted_not_clinically_reviewed",
+      "reason": "An explicit current concern can justify review between routine screening visits.",
+      "observations_used": [
+        {
+          "key": "developmental_concern",
+          "value": true,
+          "observed_at_months": 22.0,
+          "valid_until_months": 22.0,
+          "source": "synthetic caregiver report"
+        }
+      ],
+      "status": "candidate_for_clinician_review"
+    },
+    {
+      "action_id": "autism_screen:24",
+      "domain": "social_communication",
+      "action": "Review completion or arrange age-appropriate autism screening with the clinician.",
+      "due_age_months": 24.0,
+      "due_in_months": 2.0,
+      "overdue_months": 0.0,
+      "priority_class": "scheduled",
+      "priority_key": [
+        1,
+        -24.0
+      ],
+      "rule_id": "autism_screen",
+      "rule_version": "0.1.0",
+      "evidence": [
+        {
+          "id": "CDC2026",
+          "title": "Developmental Monitoring and Screening",
+          "url": "https://www.cdc.gov/act-early/about/developmental-monitoring-and-screening.html",
+          "type": "public_health_guidance",
+          "source_date": "2026-02-16"
+        }
+      ],
+      "rule_review_status": "author_drafted_not_clinically_reviewed",
+      "reason": "US guidance identifies routine screening ages. Screening is not a diagnosis and no questionnaire is embedded in the package.",
+      "observations_used": [],
+      "status": "candidate_for_clinician_review"
+    },
+    {
+      "action_id": "developmental_screen:30",
+      "domain": "development",
+      "action": "Review completion or arrange age-appropriate standardized developmental screening with the clinician.",
+      "due_age_months": 30.0,
+      "due_in_months": 8.0,
+      "overdue_months": 0.0,
+      "priority_class": "scheduled",
+      "priority_key": [
+        1,
+        -30.0
+      ],
+      "rule_id": "developmental_screen",
+      "rule_version": "0.1.0",
+      "evidence": [
+        {
+          "id": "CDC2026",
+          "title": "Developmental Monitoring and Screening",
+          "url": "https://www.cdc.gov/act-early/about/developmental-monitoring-and-screening.html",
+          "type": "public_health_guidance",
+          "source_date": "2026-02-16"
+        }
+      ],
+      "rule_review_status": "author_drafted_not_clinically_reviewed",
+      "reason": "US guidance specifies screening ages and catch-up at the next visit when a screening was missed. The software combines older missed slots into a single catch-up review.",
+      "observations_used": [],
+      "status": "candidate_for_clinician_review"
+    }
+  ],
+  "needs_information": [
+    {
+      "action_id": "autism_screen:18",
+      "domain": "social_communication",
+      "action": "Review completion or arrange age-appropriate autism screening with the clinician.",
+      "due_age_months": 18.0,
+      "due_in_months": 0.0,
+      "overdue_months": 4.0,
+      "priority_class": "due",
+      "priority_key": [
+        2,
+        -18.0
+      ],
+      "rule_id": "autism_screen",
+      "rule_version": "0.1.0",
+      "evidence": [
+        {
+          "id": "CDC2026",
+          "title": "Developmental Monitoring and Screening",
+          "url": "https://www.cdc.gov/act-early/about/developmental-monitoring-and-screening.html",
+          "type": "public_health_guidance",
+          "source_date": "2026-02-16"
+        }
+      ],
+      "rule_review_status": "author_drafted_not_clinically_reviewed",
+      "reason": "US guidance identifies routine screening ages. Screening is not a diagnosis and no questionnaire is embedded in the package.",
+      "observations_used": [],
+      "status": "verify_before_recommending",
+      "missing": [
+        "completion:autism_screen:18"
+      ]
+    }
+  ],
+  "questions": [
+    {
+      "field": "completion:autism_screen:18",
+      "affected_action_ids": [
+        "autism_screen:18"
+      ],
+      "potential_priority": 2,
+      "affected_count": 1
+    }
+  ],
+  "withheld": [],
+  "trace": [
+    {
+      "rule_id": "xxy_support_plan_review",
+      "result": "trigger_explicitly_false"
+    },
+    {
+      "rule_id": "sct_support_plan_review",
+      "result": "karyotype_not_matched"
+    },
+    {
+      "action_id": "developmental_screen:9",
+      "result": "older_slot_collapsed_into_latest_catch_up_review"
+    },
+    {
+      "action_id": "developmental_screen:18",
+      "result": "completed"
+    }
+  ],
+  "warnings": []
+}

@@ -1,0 +1,14 @@
+{
+  "synthetic_example": true,
+  "age_months": 22,
+  "jurisdiction": "US",
+  "karyotype": "47,XXY",
+  "karyotype_status": "confirmed",
+  "observations": [
+    {"key": "developmental_concern", "value": true, "observed_at_months": 22, "valid_until_months": 22, "source": "synthetic caregiver report"},
+    {"key": "developmental_followup_plan_in_place", "value": true, "observed_at_months": 22, "valid_until_months": 22, "source": "synthetic clinician record"}
+  ],
+  "completions": [
+    {"action_id": "developmental_screen:18", "status": "done", "recorded_at_months": 18, "source": "synthetic clinician record"}
+  ]
+}
