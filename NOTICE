@@ -1,0 +1,20 @@
+SCA Care Planner
+Copyright 2026 Sidhartha Mitra and SidLabs Online LLP
+
+This product includes software developed by Sidhartha Mitra
+(SidLabs Online LLP, New Delhi, India). https://github.com/SidLabs-Online/SCA-Care-Planner
+
+Attribution requirement
+-----------------------
+Under section 4(d) of the Apache License 2.0, any redistribution of this
+software or of a derivative work must carry this NOTICE file (or its
+contents) in the place where third-party notices normally appear.
+
+If you use this library or its algorithm in research, please cite it using
+CITATION.cff in the repository root.
+
+Evidence sources cited in the packs remain under their own terms. Citation
+here grants no right to redistribute third-party guidelines, articles or
+questionnaire instruments.
+
+Research software. Not clinically validated. Not a medical device.

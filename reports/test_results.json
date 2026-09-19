@@ -1,0 +1,37 @@
+{
+  "generated_at_utc": "2026-09-19T13:45:50+00:00",
+  "library_version": "0.2.0",
+  "python": "3.11.15",
+  "test_type": "synthetic_fixture_software_tests",
+  "tests": {
+    "passed": 106,
+    "failed": 0,
+    "skipped": 0
+  },
+  "passed": true,
+  "differential_check": "2000 seeded random histories compared against the frozen 0.1.0 prototype",
+  "clinical_validation": "not_performed",
+  "patient_data_used": false,
+  "predictive_model_trained": false,
+  "pack": {
+    "id": "sca-care-us-development-seed",
+    "version": "0.1.0",
+    "sha256": "03d69fd2ea427adf7f40c20afd8bd27f214c3bb2fcc2508cde2a4848039db01c"
+  },
+  "source_sha256": {
+    "__init__.py": "6180481e51e6277671f0989854e18f9a346566bd09991c38b9e0aeca6be53b14",
+    "__main__.py": "72cf63274a17c979641d33250e06b70857f3217172be015276c32c149b2f4bdf",
+    "cli.py": "d72dd22810b92c8913f3b61144893d76f68561e676f881c8f7c7a9ca980872c9",
+    "compare.py": "79de0632a90a6c9854fbae562989295f8611fbc9a6ef77bd1df3da0bd6a946d0",
+    "engine.py": "20cc74b13793caa77ebace56c8c7c24970bf1a56d97182e6550bc2f9fee6c8ab",
+    "errors.py": "04239c8e3e25f79a67f02d935d4d4dac7bed884cbf416c5a5862ff93a5c1a2a3",
+    "evidence.py": "8adef7e05a5d02aeedeb48800b3b99ef5a03641b8ed11e53eeeb3687f6b1897b",
+    "explain.py": "9a5e81b6409c5c05e2a9a453829f7647e88837b9096e86f1f583961b9348c1c9",
+    "graph.py": "8a3da80064b0a582b951890b19787d4466395da04d4860c23c3dc5140d4e2b48",
+    "history.py": "7d82a73da083d0973d450fe77e2d73116c0be2195eed420167b73e2d481dc533",
+    "plan.py": "921304813b4dca780c96d6e42fc08144c1ff34eb1c25a4b741618a8b2b531a91",
+    "timeline.py": "829b4ebe4dde78b013abdebc1e334b30f01348336815f56c267ef5ab7ebd33ec",
+    "truth.py": "571872c03e2a2cf3a5c21e2e6ec441a64312ac03f1ce111869d122475a843091",
+    "whatif.py": "970f81bc802564ea45753282118a84ca4b5bd52a2f711d0997358eb2c5986190"
+  }
+}

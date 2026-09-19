@@ -1,0 +1,139 @@
+{
+  "id": "sca-care-us-development-seed",
+  "version": "0.1.0",
+  "review_date": "2026-09-19",
+  "jurisdiction": "US",
+  "max_age_months": 72,
+  "supported_karyotypes": [
+    "47,XXY",
+    "47,XXX",
+    "47,XYY"
+  ],
+  "scope": "Incomplete developmental monitoring demonstration; clinician review of rules has not occurred. No acute triage, endocrine, cardiac or treatment modules.",
+  "sources": {
+    "CDC2026": {
+      "id": "CDC2026",
+      "title": "Developmental Monitoring and Screening",
+      "url": "https://www.cdc.gov/act-early/about/developmental-monitoring-and-screening.html",
+      "type": "public_health_guidance",
+      "source_date": "2026-02-16"
+    },
+    "AAP2020": {
+      "id": "AAP2020",
+      "title": "Promoting Optimal Development",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/31843861/",
+      "type": "clinical_report",
+      "source_date": "2020"
+    },
+    "EAA2020": {
+      "id": "EAA2020",
+      "title": "European academy of andrology guidelines on Klinefelter Syndrome",
+      "url": "https://www.ese-hormones.org/media/inadla4j/endorsed-gl-eaa-klinefelter-sdr-guidelines.pdf",
+      "type": "guideline",
+      "locator": "Recommendation 17; section 3.2.5",
+      "source_date": "2020",
+      "local_adaptation": "European guidance proposed for US clinician review; no local endorsement implied"
+    },
+    "SCT2025": {
+      "id": "SCT2025",
+      "title": "Quantifying the Spectrum of Early Motor and Language Milestones in Sex Chromosome Trisomy",
+      "url": "https://doi.org/10.1542/peds.2024-068773",
+      "type": "prospective_observational_study",
+      "source_date": "2025-07-24"
+    }
+  },
+  "rules": [
+    {
+      "id": "developmental_concern_review",
+      "version": "0.1.0",
+      "kind": "observation",
+      "domain": "development",
+      "feature": "developmental_concern",
+      "expected": true,
+      "min_age_months": 0,
+      "max_age_months": 72,
+      "action": "Discuss the current developmental concern with the child's clinician to decide on assessment or referral.",
+      "reason": "An explicit current concern can justify review between routine screening visits.",
+      "sources": [
+        "AAP2020"
+      ],
+      "review_status": "author_drafted_not_clinically_reviewed"
+    },
+    {
+      "id": "xxy_support_plan_review",
+      "version": "0.1.0",
+      "kind": "observation",
+      "domain": "communication_learning",
+      "feature": "developmental_followup_plan_in_place",
+      "expected": false,
+      "karyotypes": [
+        "47,XXY"
+      ],
+      "min_age_months": 0,
+      "max_age_months": 72,
+      "action": "Discuss a documented plan for speech, learning and psychosocial monitoring with the care team.",
+      "reason": "XXY guidance supports monitoring and appropriate support; the pack does not prescribe an assessment interval or infer impairment.",
+      "sources": [
+        "EAA2020"
+      ],
+      "review_status": "author_drafted_not_clinically_reviewed"
+    },
+    {
+      "id": "sct_support_plan_review",
+      "version": "0.1.0",
+      "kind": "observation",
+      "domain": "development",
+      "feature": "developmental_followup_plan_in_place",
+      "expected": false,
+      "karyotypes": [
+        "47,XXX",
+        "47,XYY"
+      ],
+      "min_age_months": 0,
+      "max_age_months": 36,
+      "action": "Discuss an individualized developmental follow-up plan with the care team.",
+      "reason": "A prospective SCT milestone study supports closer developmental assessment, but does not establish an individualized 24-month risk probability or a mandatory visit schedule.",
+      "sources": [
+        "SCT2025"
+      ],
+      "review_status": "author_drafted_not_clinically_reviewed"
+    },
+    {
+      "id": "developmental_screen",
+      "version": "0.1.0",
+      "kind": "schedule",
+      "domain": "development",
+      "min_age_months": 0,
+      "max_age_months": 36,
+      "ages_months": [
+        9,
+        18,
+        30
+      ],
+      "action": "Review completion or arrange age-appropriate standardized developmental screening with the clinician.",
+      "reason": "US guidance specifies screening ages and catch-up at the next visit when a screening was missed. The software combines older missed slots into a single catch-up review.",
+      "sources": [
+        "CDC2026"
+      ],
+      "review_status": "author_drafted_not_clinically_reviewed"
+    },
+    {
+      "id": "autism_screen",
+      "version": "0.1.0",
+      "kind": "schedule",
+      "domain": "social_communication",
+      "min_age_months": 0,
+      "max_age_months": 36,
+      "ages_months": [
+        18,
+        24
+      ],
+      "action": "Review completion or arrange age-appropriate autism screening with the clinician.",
+      "reason": "US guidance identifies routine screening ages. Screening is not a diagnosis and no questionnaire is embedded in the package.",
+      "sources": [
+        "CDC2026"
+      ],
+      "review_status": "author_drafted_not_clinically_reviewed"
+    }
+  ]
+}
